@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.xiaopengwang.exoplayer2demo20170608.PlayerActivity">
+    <LinearLayout
+        android:id="@+id/controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/updateBitrate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:onClick="simulateBitrate"
+            android:text="Update Bitrate" />
+
+        <Button
+            android:id="@+id/reportError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:onClick="simulateError"
+            android:text="Report Error" />
+
+        <Button
+            android:id="@+id/podStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:onClick="podStart"
+            android:text="POD Start" />
+
+        <Button
+            android:id="@+id/podEnd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:onClick="podEnd"
+            android:text="POD End" />
+
+    </LinearLayout>
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/simpleExoPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/controls"
+        android:padding="10dp">
+
+    </com.google.android.exoplayer2.ui.SimpleExoPlayerView>
+
+</RelativeLayout>
